@@ -1,5 +1,10 @@
+//this.onmessage è un metodo di Worker (è una funzione di callback) che viene chiamato quando il worker riceve un messaggio. 
+//Il messaggio è un oggetto che contiene i dati inviati dal thread principale (app.js)
+//onemessage è una funzione che accetta un parametro (message) che rappresenta il messaggio ricevuto e 
+//poi esegue del codice in base a quel messaggio. In questo caso, il worker riceve un messaggio che contiene l'operazione da eseguire (pow o root) 
+//e i valori di base e pow, quindi esegue l'operazione richiesta e invia il risultato al thread principale usando postMessage.
 
-this.onmessage = (message) => {
+this.onmessage = (message) => {   //si usa this perché siamo in un contesto di worker, e this si riferisce al worker stesso
     console.log('Sono worker e ho ricevuto messaggio da app js', message.data);
     
     const operation = message.data.operation;

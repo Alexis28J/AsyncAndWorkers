@@ -25,7 +25,8 @@ const baseInput = document.getElementById('base');
 const powInput = document.getElementById('pow');
 const resultSpan = document.getElementById('result');
 
-const slave = new Worker('./worker.js');
+//Worker è una classe che rappresenta un thread separato di esecuzione, e il costruttore accetta come argomento il percorso del file JavaScript che contiene il codice da eseguire in quel thread (in questo caso, worker.js).
+const slave = new Worker('./worker.js');  //creo un nuovo worker, che è un thread separato che esegue il codice in worker.js
 slave.onmessage = (message) => {
     console.log('Sono app e ho ricevuto un messagio da worker js', message.data);
     const result = message.data;

@@ -1,5 +1,6 @@
 // //Questo è un piccolo esempio classico di come fare una richiesta HTTP in JavaScript usando XMLHttpRequest
-// //Copilot:  https://copilot.microsoft.com/shares/UVZ7gSy7VgLupAKANw3VE
+// //Copilot:  https://copilot.microsoft.com/shares/UVZ7gSy7VgLupAKANw3VE, https://copilot.microsoft.com/shares/s4RZb9asueX8mBioYATcn
+
 
 // const url = "https://pokeapi.co/api/v2/pokemon/ditto";  //se mi manca un solo carattere, il browser non si connetterà (troverà) con i dati
 
